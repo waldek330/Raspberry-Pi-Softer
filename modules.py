@@ -102,7 +102,7 @@ def fail_log_email(serial_scrapped):
     smtp_server = "smtp.gmail.com"
     sender_email = "waldemar.lusiak@nksgroup.pl"  # Enter your address
     receiver_email = "waldemar.lusiak@nksgroup.pl"  # Enter receiver address , admin@onservice.pl, remigiusz.zerbst@nksgroup.pl
-    password = 'Waldek1234@'
+    password = ''
     subject = 'Error occured during software update on Raspberry Pi softer'
     message = """
      
@@ -120,7 +120,7 @@ def veryfi_odoo_serial(serial_scrapped):
         url_stg = "https://sbx-nksgroup.odoo.com"
         db_stg = 'nksgroup-sbx-4964326'
         username = 'waldemar.lusiak@nksgroup.pl'
-        password = 'Waldek1234!'
+        password = ''
         models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url_stg))
         common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url_stg))
         uid = common.authenticate(db_stg, username, password, {})
