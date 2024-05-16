@@ -24,7 +24,7 @@ passw = "1234"
 url = "http://192.168.1.1/ui/swc/login/index?mode=choose"
 path = "/usr/share/applications/chromium-browser.desktop"
 firmware_site_address = "http://192.168.1.1/ui/swc/router/firmware/index"
-firmware_name = "plik tekstowy.txt"
+firmware_name = "plik_tekstowy.txt"
 api_key = "bf4fd965a1f8e2da56f62162d790d06cd5360620"
 
 status_pass = 'PASS'
@@ -100,8 +100,8 @@ def red_led_off():
 def fail_log_email(serial_scrapped):
     port = 465  # For SSL
     smtp_server = "smtp.gmail.com"
-    sender_email = "waldemar.lusiak@nksgroup.pl"  # Enter your address
-    receiver_email = "waldemar.lusiak@nksgroup.pl"  # Enter receiver address , admin@onservice.pl, remigiusz.zerbst@nksgroup.pl
+    sender_email = ""  # Enter your address
+    receiver_email = ""  # Enter receiver address , admin@onservice.pl, remigiusz.zerbst@nksgroup.pl
     password = ''
     subject = 'Error occured during software update on Raspberry Pi softer'
     message = """
@@ -117,9 +117,9 @@ def fail_log_email(serial_scrapped):
 
 def veryfi_odoo_serial(serial_scrapped):
     try:
-        url_stg = "https://sbx-nksgroup.odoo.com"
-        db_stg = 'nksgroup-sbx-4964326'
-        username = 'waldemar.lusiak@nksgroup.pl'
+        url_stg = "https://"
+        db_stg = ''
+        username = ''
         password = ''
         models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url_stg))
         common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url_stg))
